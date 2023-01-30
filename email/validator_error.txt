@@ -4,5 +4,7 @@ This email is sent from 0L Validator health monitor. Seems like it has encounter
 
 ${err}.
 
+Please take actions accordingly and unjail the validator.
+
 Thanks,
 0L Validator Monitor

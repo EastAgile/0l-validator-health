@@ -54,7 +54,7 @@ function calNotification(validator, newErrors) {
     //console.log(newErrors)
     const hasErrors = validatorErrorMap.has(errorKey);
     if (newErrors.length === 0 && hasErrors) {
-        sendNotification(validator, [])
+        sendNotification(validator, { value: "" })
         validatorErrorMap.delete(errorKey)
     }
     else if (newErrors.length > 0 && !hasErrors) {
@@ -71,7 +71,7 @@ function calNotification(validator, newErrors) {
 }
 
 function sendNotification(ip, err) {
-    if (CONFIG.SENDGRID_API_KEY) {
+    if (CONFIG.SENDGRID_API_KEY && err.value.includes("not in validator set")) {
         sendEmail(JSON.stringify(err))
     }
     if (!CONFIG.VALIDATOR_WEBHOOK) {
