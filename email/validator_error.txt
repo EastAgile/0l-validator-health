@@ -1,0 +1,10 @@
+Hi Admin,
+
+This email is sent from 0L Validator health monitor. Seems like it has encountered some errors, specifically:
+
+${err}.
+
+Please take actions accordingly and unjail the validator.
+
+Thanks,
+0L Validator Monitor
